@@ -1,12 +1,9 @@
 .footer {
-	width: min(1120px, 92vw);
-	margin: 0 auto 1rem;
-	padding: 0.9rem 1.2rem;
-	border-radius: 12px;
-	background: #fff;
-	border: 1px solid #e5e7eb;
-	color: #475569;
-	text-align: center;
+	border: 0;
+	padding: 0;
+	margin-top: 0.25rem;
+	color: #444;
+	font-size: 0.9rem;
 }
 
 .footer p {

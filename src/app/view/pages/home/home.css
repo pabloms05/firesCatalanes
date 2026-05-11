@@ -1,5 +1,31 @@
 .home {
 	display: grid;
-	grid-template-columns: 1fr;
-	gap: 1rem;
+	grid-template-columns: minmax(280px, 0.95fr) minmax(360px, 1.55fr);
+	gap: 0.35rem;
+	min-height: 78dvh;
+}
+
+.column {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.column-left {
+	border: 3px solid #68c32b;
+}
+
+.column-right {
+	border: 3px solid #a333c2;
+}
+
+@media (max-width: 900px) {
+	.home {
+		grid-template-columns: 1fr;
+	}
+
+	.column-left,
+	.column-right {
+		min-height: auto;
+	}
 }

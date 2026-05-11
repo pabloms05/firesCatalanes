@@ -1,9 +1,13 @@
 <section class="home">
-	<app-comarca-list
-		[comarques]="comarques"
-		[selectedComarca]="selectedComarca"
-		(comarcaSelected)="onComarcaSelected($event)">
-	</app-comarca-list>
+	<div class="column column-left">
+		<app-comarca-list
+			[comarques]="comarques"
+			[selectedComarca]="selectedComarca"
+			(comarcaSelected)="onComarcaSelected($event)">
+		</app-comarca-list>
+	</div>
 
-	<app-fair-list [fairs]="filteredFairs"></app-fair-list>
+	<div class="column column-right">
+		<app-fair-list [fairs]="filteredFairs"></app-fair-list>
+	</div>
 </section>

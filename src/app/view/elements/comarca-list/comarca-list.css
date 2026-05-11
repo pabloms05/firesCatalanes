@@ -1,28 +1,30 @@
 .panel {
+	min-height: 100%;
 	background: #ffffff;
-	border: 1px solid #e5e7eb;
-	border-radius: 12px;
-	padding: 1rem;
+	padding: 0.6rem;
+	box-sizing: border-box;
 }
 
 .panel h2 {
 	margin: 0 0 0.8rem;
-	font-size: 1.1rem;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .chips {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
+	flex-direction: column;
+	gap: 0.35rem;
 }
 
 .chip {
 	border: 1px solid #d1d5db;
 	background: #fff;
 	color: #0f172a;
-	border-radius: 999px;
-	padding: 0.35rem 0.75rem;
+	border-radius: 3px;
+	padding: 0.35rem 0.55rem;
 	cursor: pointer;
+	text-align: left;
 }
 
 .chip.active {
