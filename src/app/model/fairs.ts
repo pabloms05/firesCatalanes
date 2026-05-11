@@ -2,9 +2,10 @@ export interface Fair {
 	[key: string]: unknown;
 }
 
-const NAME_KEYS = ['nom', 'name', 'fira', 'titol', 'title'];
-const COMARCA_KEYS = ['comarca', 'county'];
+const NAME_KEYS = ['activityName', 'nom', 'name', 'fira', 'titol', 'title'];
+const COMARCA_KEYS = ['regionName', 'comarca', 'county'];
 const MUNICIPALITY_KEYS = [
+	'municipalityName',
 	'poblacio',
 	'población',
 	'poblacion',
@@ -14,6 +15,7 @@ const MUNICIPALITY_KEYS = [
 	'town',
 	'city'
 ];
+const DATE_KEYS = ['date', 'data', 'dia', 'when'];
 const START_DATE_KEYS = ['dataInici', 'startDate', 'inici', 'from'];
 const END_DATE_KEYS = ['dataFi', 'endDate', 'fi', 'to'];
 
@@ -40,6 +42,11 @@ export function getFairMunicipality(fair: Fair): string {
 }
 
 export function getFairDateRange(fair: Fair): string {
+	const date = readStringByKeys(fair, DATE_KEYS);
+	if (date) {
+		return date;
+	}
+
 	const start = readStringByKeys(fair, START_DATE_KEYS);
 	const end = readStringByKeys(fair, END_DATE_KEYS);
 
