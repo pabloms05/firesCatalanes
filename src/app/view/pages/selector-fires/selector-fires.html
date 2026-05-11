@@ -1,0 +1,11 @@
+<section class="selector-fires">
+  <div class="content">
+    <app-comarca-list
+      [comarques]="comarques"
+      [selectedComarca]="selectedComarca"
+      (comarcaSelected)="onComarcaSelected($event)">
+    </app-comarca-list>
+
+    <app-fair-list [fairs]="filteredFairs"></app-fair-list>
+  </div>
+</section>
