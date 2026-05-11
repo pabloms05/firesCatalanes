@@ -1,8 +1,11 @@
 .panel {
 	min-height: 100%;
-	background: #ffffff;
-	padding: 0.6rem;
+	background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(247,250,253,0.94));
+	padding: 1rem;
 	box-sizing: border-box;
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	box-shadow: var(--shadow-md);
 }
 
 .panel h2 {
@@ -10,13 +13,15 @@
 }
 
 .panel .heading {
-	border: 2px solid #2f9e4a;
-	border-radius: 8px;
-	padding: 0.8rem 1rem;
-	font-size: 1.25rem;
-	font-weight: 600;
-	color: #0f5132;
-	margin-bottom: 0.75rem;
+	border: 1px solid rgba(31, 143, 87, 0.2);
+	border-radius: 14px;
+	padding: 0.9rem 1rem;
+	font-size: 1.15rem;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	color: var(--accent-green);
+	margin-bottom: 0.85rem;
+	background: rgba(31, 143, 87, 0.06);
 }
 
 .empty {
@@ -32,27 +37,32 @@
 }
 
 .card {
-	border: 1px solid #e6f0e8;
-	border-radius: 8px;
-	padding: 0.9rem;
+	border: 1px solid rgba(19, 33, 56, 0.08);
+	border-radius: 16px;
+	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	gap: 1rem;
+	background: var(--surface-strong);
+	box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
 }
 
 .card h3 {
 	margin: 0 0 0.35rem;
+	font-size: 1.02rem;
+	letter-spacing: -0.02em;
 }
 
 .card p {
-	margin: 0.15rem 0;
+	margin: 0.18rem 0;
+	color: var(--text-secondary);
 }
 
 .details {
 	margin-top: 0.6rem;
 	padding-top: 0.6rem;
-	border-top: 1px dashed #dbe8dd;
+	border-top: 1px dashed rgba(19, 33, 56, 0.14);
 }
 
 .details p {
@@ -68,22 +78,32 @@
 
 .details-button,
 .favorite-button {
-	border: 1px solid #d1d5db;
+	border: 1px solid transparent;
 	background: #fff;
-	border-radius: 8px;
-	padding: 0.45rem 0.65rem;
+	border-radius: 999px;
+	padding: 0.55rem 0.8rem;
 	cursor: pointer;
 	white-space: nowrap;
+	font-weight: 700;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .details-button {
-	border-color: #2c97d8;
-	color: #0c6fb1;
+	border-color: rgba(33, 102, 214, 0.2);
+	color: var(--accent-blue);
+	box-shadow: 0 6px 14px rgba(33, 102, 214, 0.08);
 }
 
 .favorite-button {
-	border-color: #2f9e4a;
-	color: #0f5132;
+	border-color: rgba(31, 143, 87, 0.2);
+	color: var(--accent-green);
+	box-shadow: 0 6px 14px rgba(31, 143, 87, 0.08);
+}
+
+.details-button:hover,
+.favorite-button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
 }
 
 @media (max-width: 760px) {

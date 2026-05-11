@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+	--app-font: 'Manrope', 'Segoe UI', sans-serif;
+	--page-bg: #edf3f8;
+	--surface: rgba(255, 255, 255, 0.88);
+	--surface-strong: #ffffff;
+	--text-primary: #142033;
+	--text-secondary: #52627a;
+	--border: rgba(19, 33, 56, 0.12);
+	--shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.12);
+	--shadow-md: 0 10px 24px rgba(15, 23, 42, 0.08);
+	--accent-blue: #2166d6;
+	--accent-green: #1f8f57;
+}
+
+html {
+	background:
+		radial-gradient(circle at top left, rgba(33, 102, 214, 0.12), transparent 28%),
+		radial-gradient(circle at top right, rgba(31, 143, 87, 0.12), transparent 24%),
+		linear-gradient(180deg, #f5f8fc 0%, #edf3f8 100%);
+}
+
+body {
+	margin: 0;
+	min-height: 100dvh;
+	color: var(--text-primary);
+	font-family: var(--app-font);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+button,
+select,
+input {
+	font: inherit;
+}
