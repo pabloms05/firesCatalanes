@@ -11,7 +11,7 @@ import { Fair, getFairComarca } from '../../../model/fairs';
   styleUrl: './home.css',
 })
 export class Home {
-  readonly fairs: Fair[] = (fairsData as Fair[]) ?? [];
+  readonly fairs: Fair[] = (fairsData as unknown as Fair[]) ?? [];
   readonly comarques: string[] = this.buildComarques();
   selectedComarca = this.comarques[0] ?? '';
 

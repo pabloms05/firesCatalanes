@@ -1,5 +1,5 @@
 export interface Fair {
-	[key: string]: string | number | boolean | null | undefined;
+	[key: string]: unknown;
 }
 
 const NAME_KEYS = ['nom', 'name', 'fira', 'titol', 'title'];
