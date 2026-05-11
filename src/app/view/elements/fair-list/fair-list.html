@@ -1,0 +1,24 @@
+<section class="panel">
+	<h2>Llistat de fires</h2>
+
+	@if (fairs().length === 0) {
+		<p class="empty">No hi ha fires per aquesta comarca.</p>
+	}
+
+	<ul class="list">
+		@for (fair of fairs(); track fairName(fair) + fairMunicipality(fair)) {
+			<li class="card">
+				<div>
+					<h3>{{ fairName(fair) }}</h3>
+					<p><strong>Poblacio:</strong> {{ fairMunicipality(fair) }}</p>
+					<p><strong>Comarca:</strong> {{ fairComarca(fair) }}</p>
+					<p><strong>Dates:</strong> {{ fairDateRange(fair) }}</p>
+				</div>
+
+				<button type="button" (click)="toggleFavorite(fair)">
+					{{ isFavorite(fair) ? 'Treure de preferides' : 'Afegir a preferides' }}
+				</button>
+			</li>
+		}
+	</ul>
+</section>

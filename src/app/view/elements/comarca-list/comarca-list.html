@@ -1,0 +1,15 @@
+<section class="panel">
+	<h2>Comarques</h2>
+
+	<div class="chips">
+		@for (comarca of comarques(); track comarca) {
+			<button
+				type="button"
+				class="chip"
+				[class.active]="selectedComarca() === comarca"
+				(click)="onSelect(comarca)">
+				{{ comarca }}
+			</button>
+		}
+	</div>
+</section>

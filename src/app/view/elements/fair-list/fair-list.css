@@ -1,0 +1,56 @@
+.panel {
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	padding: 1rem;
+}
+
+.panel h2 {
+	margin: 0 0 0.8rem;
+	font-size: 1.1rem;
+}
+
+.empty {
+	color: #6b7280;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 0.75rem;
+}
+
+.card {
+	border: 1px solid #e5e7eb;
+	border-radius: 10px;
+	padding: 0.8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	gap: 1rem;
+}
+
+.card h3 {
+	margin: 0 0 0.35rem;
+}
+
+.card p {
+	margin: 0.15rem 0;
+}
+
+.card button {
+	border: 1px solid #d1d5db;
+	background: #f8fafc;
+	border-radius: 8px;
+	padding: 0.45rem 0.65rem;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+	.card {
+		flex-direction: column;
+	}
+}

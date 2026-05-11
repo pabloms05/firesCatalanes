@@ -1,0 +1,20 @@
+<section class="panel">
+	<h2>Fires preferides</h2>
+
+	@if (favorites().length === 0) {
+		<p class="empty">Encara no tens fires preferides.</p>
+	}
+
+	<ul class="list">
+		@for (fair of favorites(); track fairName(fair) + fairMunicipality(fair)) {
+			<li class="card">
+				<div>
+					<h3>{{ fairName(fair) }}</h3>
+					<p>{{ fairMunicipality(fair) }} · {{ fairComarca(fair) }}</p>
+					<p>{{ fairDateRange(fair) }}</p>
+				</div>
+				<button type="button" (click)="remove(fair)">Eliminar</button>
+			</li>
+		}
+	</ul>
+</section>

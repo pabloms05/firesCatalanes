@@ -1,0 +1,9 @@
+<section class="home">
+	<app-comarca-list
+		[comarques]="comarques"
+		[selectedComarca]="selectedComarca"
+		(comarcaSelected)="onComarcaSelected($event)">
+	</app-comarca-list>
+
+	<app-fair-list [fairs]="filteredFairs"></app-fair-list>
+</section>

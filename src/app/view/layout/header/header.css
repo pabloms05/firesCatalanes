@@ -1,0 +1,42 @@
+.header {
+	width: min(1120px, 92vw);
+	margin: 1rem auto 0;
+	padding: 1rem 1.2rem;
+	border-radius: 14px;
+	background: linear-gradient(120deg, #fff4df 0%, #eef8ff 100%);
+	border: 1px solid #f0e2cd;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.brand h1 {
+	margin: 0;
+	font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.brand p {
+	margin: 0.2rem 0 0;
+	color: #4b5563;
+}
+
+.menu {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.menu a {
+	color: #0f172a;
+	text-decoration: none;
+	padding: 0.45rem 0.8rem;
+	border-radius: 8px;
+	background: #ffffff;
+	border: 1px solid #e7e5e4;
+}
+
+.menu a.active {
+	background: #0f172a;
+	color: #ffffff;
+}

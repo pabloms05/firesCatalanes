@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"nom": "Fira de Sant Ponç",
+		"comarca": "Barcelones",
+		"poblacio": "Barcelona",
+		"dataInici": "2026-05-10",
+		"dataFi": "2026-05-12"
+	},
+	{
+		"id": 2,
+		"nom": "Fira del Vi",
+		"comarca": "Alt Penedes",
+		"poblacio": "Vilafranca del Penedes",
+		"dataInici": "2026-06-02",
+		"dataFi": "2026-06-04"
+	},
+	{
+		"id": 3,
+		"nom": "Fira Medieval",
+		"comarca": "Osona",
+		"poblacio": "Vic",
+		"dataInici": "2026-09-14",
+		"dataFi": "2026-09-15"
+	}
+]
