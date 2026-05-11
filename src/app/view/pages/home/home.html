@@ -5,9 +5,11 @@
 			[selectedComarca]="selectedComarca"
 			(comarcaSelected)="onComarcaSelected($event)">
 		</app-comarca-list>
+
+		<app-fair-list [fairs]="filteredFairs"></app-fair-list>
 	</div>
 
 	<div class="column column-right">
-		<app-fair-list [fairs]="filteredFairs"></app-fair-list>
+		<app-favorites-list></app-favorites-list>
 	</div>
 </section>

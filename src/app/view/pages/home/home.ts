@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import fairsData from '../../../model/fairs.json';
 import { ComarcaList } from '../../elements/comarca-list/comarca-list';
 import { FairList } from '../../elements/fair-list/fair-list';
+import { FavoritesList } from '../../elements/favorites-list/favorites-list';
 import { Fair, getFairComarca } from '../../../model/fairs';
 
 @Component({
   selector: 'app-home',
-  imports: [ComarcaList, FairList],
+  imports: [ComarcaList, FairList, FavoritesList],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
