@@ -3,10 +3,14 @@ import { input } from '@angular/core';
 import { FavoritesService } from '../../../core/services/favorites';
 import {
   Fair,
+  getFairAddress,
   getFairComarca,
   getFairDateRange,
+  getFairEmail,
   getFairMunicipality,
-  getFairName
+  getFairName,
+  getFairPhone,
+  getFairWeb
 } from '../../../model/fairs';
 
 @Component({
@@ -17,8 +21,13 @@ import {
 })
 export class FairList {
   readonly fairs = input<Fair[]>([]);
+  expandedFairId: string | null = null;
 
   constructor(private readonly favoritesService: FavoritesService) {}
+
+  trackFair(fair: Fair): string {
+    return `${this.fairName(fair)}|${this.fairMunicipality(fair)}`;
+  }
 
   fairName(fair: Fair): string {
     return getFairName(fair);
@@ -34,6 +43,31 @@ export class FairList {
 
   fairDateRange(fair: Fair): string {
     return getFairDateRange(fair);
+  }
+
+  fairAddress(fair: Fair): string {
+    return getFairAddress(fair);
+  }
+
+  fairPhone(fair: Fair): string {
+    return getFairPhone(fair);
+  }
+
+  fairEmail(fair: Fair): string {
+    return getFairEmail(fair);
+  }
+
+  fairWeb(fair: Fair): string {
+    return getFairWeb(fair);
+  }
+
+  toggleDetails(fair: Fair): void {
+    const fairId = this.trackFair(fair);
+    this.expandedFairId = this.expandedFairId === fairId ? null : fairId;
+  }
+
+  isExpanded(fair: Fair): boolean {
+    return this.expandedFairId === this.trackFair(fair);
   }
 
   isFavorite(fair: Fair): boolean {

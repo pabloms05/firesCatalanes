@@ -6,18 +6,32 @@
 	}
 
 	<ul class="list">
-		@for (fair of fairs(); track fairName(fair) + fairMunicipality(fair)) {
+		@for (fair of fairs(); track trackFair(fair)) {
 			<li class="card">
 				<div>
 					<h3>{{ fairName(fair) }}</h3>
 					<p><strong>Poblacio:</strong> {{ fairMunicipality(fair) }}</p>
 					<p><strong>Comarca:</strong> {{ fairComarca(fair) }}</p>
 					<p><strong>Dates:</strong> {{ fairDateRange(fair) }}</p>
+					@if (isExpanded(fair)) {
+						<div class="details">
+							<p><strong>Adreca:</strong> {{ fairAddress(fair) }}</p>
+							<p><strong>Telefon:</strong> {{ fairPhone(fair) }}</p>
+							<p><strong>Email:</strong> {{ fairEmail(fair) }}</p>
+							<p><strong>Web:</strong> {{ fairWeb(fair) }}</p>
+						</div>
+					}
 				</div>
 
-				<button type="button" (click)="toggleFavorite(fair)">
-					{{ isFavorite(fair) ? 'Treure de preferides' : 'Afegir a preferides' }}
-				</button>
+				<div class="actions">
+					<button type="button" class="details-button" (click)="toggleDetails(fair)">
+						{{ isExpanded(fair) ? 'Amagar detalls' : 'Veure detalls' }}
+					</button>
+
+					<button type="button" class="favorite-button" (click)="toggleFavorite(fair)">
+						{{ isFavorite(fair) ? 'Treure de preferides' : 'Afegir a preferides' }}
+					</button>
+				</div>
 			</li>
 		}
 	</ul>

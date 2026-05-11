@@ -1,15 +1,14 @@
 <section class="panel">
 	<h2>RegionsList component</h2>
 
-	<div class="chips">
+	<label class="select-label" for="comarca-select">Selecciona una comarca</label>
+	<select
+		id="comarca-select"
+		class="comarca-select"
+		(change)="onSelect($any($event.target).value)">
+		<option value="">Totes les comarques</option>
 		@for (comarca of comarques(); track comarca) {
-			<button
-				type="button"
-				class="chip"
-				[class.active]="selectedComarca() === comarca"
-				(click)="onSelect(comarca)">
-				{{ comarca }}
-			</button>
+			<option [value]="comarca" [selected]="selectedComarca() === comarca">{{ comarca }}</option>
 		}
-	</div>
+	</select>
 </section>

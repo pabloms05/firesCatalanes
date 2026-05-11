@@ -14,30 +14,18 @@
 	color: #0c6fb1;
 }
 
-.chips {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
+.select-label {
+	display: block;
+	margin-bottom: 0.45rem;
+	color: #0c6fb1;
+	font-weight: 600;
 }
 
-.chip {
-	border: 1px solid #d1d5db;
-	background: #fff;
-	color: #0f172a;
-	border-radius: 6px;
-	padding: 0.45rem 0.65rem;
-	cursor: pointer;
-	text-align: left;
-}
-
-.chip.active {
-	background: #0c6fb1;
-	color: #fff;
-	border-color: #0c6fb1;
-}
-
-.panel select {
+.comarca-select {
+	width: 100%;
 	padding: 0.45rem 0.6rem;
 	border-radius: 6px;
 	border: 1px solid #cbd5e1;
+	background: #ffffff;
+	color: #0f172a;
 }

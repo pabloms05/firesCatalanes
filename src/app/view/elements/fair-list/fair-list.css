@@ -49,7 +49,25 @@
 	margin: 0.15rem 0;
 }
 
-.card button {
+.details {
+	margin-top: 0.6rem;
+	padding-top: 0.6rem;
+	border-top: 1px dashed #dbe8dd;
+}
+
+.details p {
+	margin: 0.1rem 0;
+}
+
+.actions {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: flex-end;
+}
+
+.details-button,
+.favorite-button {
 	border: 1px solid #d1d5db;
 	background: #fff;
 	border-radius: 8px;
@@ -58,8 +76,22 @@
 	white-space: nowrap;
 }
 
+.details-button {
+	border-color: #2c97d8;
+	color: #0c6fb1;
+}
+
+.favorite-button {
+	border-color: #2f9e4a;
+	color: #0f5132;
+}
+
 @media (max-width: 760px) {
 	.card {
 		flex-direction: column;
+	}
+
+	.actions {
+		align-items: flex-start;
 	}
 }
